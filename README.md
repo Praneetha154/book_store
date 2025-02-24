@@ -1,6 +1,7 @@
 Simple Bookstore Application
 
-  This is a simple Django-based bookstore application that allows users to manage a collection of books. Users can add, view, edit, and delete book entries. The application also includes optional search and filter functionalities.
+  This is a simple Django-based bookstore application that allows users to manage a collection of books. Users can add, view, edit, and delete book entries. The application also includes optional search and 
+  filter functionalities.
 
 Features
 
