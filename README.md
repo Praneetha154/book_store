@@ -54,12 +54,6 @@ Installation
         Open your browser and go to http://127.0.0.1:8000/.
 
 
-Screenshots
-
-     Home Page
-
-          ![Screenshot (4)](https://github.com/user-attachments/assets/1f992ed6-a579-4fec-b3b8-c43004f84380)
-
 
 Usage
 
