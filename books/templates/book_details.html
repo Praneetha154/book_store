@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+
+{% block title %}Details{% endblock title %}
+
+{% block content %}
+<div class="book-container">
+    <h1>{{ book.title }}</h1>
+    <div class="book-details">
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Price:</strong> ₹{{ book.price }}</p>
+        <p><strong>Description:</strong> {{ book.description }}</p>
+        <a href="{% url 'edit' book.id %}" class="btn btn-primary">Edit</a>
+        <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-danger">Delete</button>
+
+        <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+        <div class="modal-content">
+            {% csrf_token %}
+            <div class="modal-container">
+            <h1>Delete Account</h1>
+            <p>Are you sure you want to delete your account?</p>
+            
+            <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <form action="{% url 'delete' book.id %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Confirm" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        
+        <a href="/" class="btn btn-outline-secondary">Back to Home</a>
+    </div>
+</div>
+
+
+
+{% endblock content %}
+

@@ -1,0 +1,278 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+nav {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    display: inline-block;
+}
+nav a:hover {
+    background-color: #575757;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+.search-bar input {
+    padding: 7px;
+    margin-right: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+.search-bar button {
+    padding: 7px 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.search-bar button:hover {
+    background-color: #555;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.book-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.book-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.book-author {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.book-price {
+    font-size: 18px;
+    color: #e67e22;
+    font-weight: bold;
+}
+
+.view-details-btn {
+    background-color: #333;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #575757;
+}
+
+
+/* book details  */
+.book-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Image Styling */
+.book-image {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Book Details Section */
+.book-details {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.book-details p {
+    margin: 10px 0;
+}
+
+.book-details strong {
+    color: #333;
+}
+
+/* Price Styling */
+.book-price {
+    font-size: 22px;
+    color: #e67e22;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Back to Home Button */
+.back-home-btn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 30px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.back-home-btn:hover {
+    background-color: #575757;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .book-image {
+        width: 250px;
+        height: 350px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+
+
+
+.cancelbtn, .deletebtn {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Add a color to the cancel button */
+  .cancelbtn {
+    background-color: #ccc;
+    color: black;
+  }
+  
+  /* Add a color to the delete button */
+  .deletebtn {
+    background-color: #f44336;
+  }
+  
+  /* Add padding and center-align text to the container */
+  .modal-container {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  /* The Modal Close Button (x) */
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and delete button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .deletebtn {
+       width: 100%;
+    }
+  }
